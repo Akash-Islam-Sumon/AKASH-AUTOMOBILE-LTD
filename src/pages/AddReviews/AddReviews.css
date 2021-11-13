@@ -1,0 +1,14 @@
+.form-page {
+  background-color: rgb(106, 116, 255);
+}
+.form {
+  display: flex;
+  justify-content: center;
+}
+.form input {
+  display: flex;
+  padding: 15px 40px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}

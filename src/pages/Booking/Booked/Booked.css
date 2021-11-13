@@ -1,0 +1,8 @@
+.booking-form {
+  background-color: rgb(243, 243, 255);
+}
+.booking-form input {
+  width: 95%;
+  margin-top: 15px;
+  padding: 10px;
+}
