@@ -1,9 +1,7 @@
 import "./Booked.css";
 import React from "react";
-
 import { useForm } from "react-hook-form";
 import Navigation from "../../Shared/Navigation/Navigation";
-
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -16,7 +14,7 @@ const Booked = ({ booked }) => {
   const { user } = useAuth();
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/order", {
+    fetch("https://safe-taiga-87363.herokuapp.com/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",

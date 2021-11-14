@@ -7,7 +7,7 @@ import Navigation from "../Shared/Navigation/Navigation";
 const AddReviews = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addreviews", {
+    fetch("https://safe-taiga-87363.herokuapp.com/addreviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -14,8 +14,9 @@ const useFirebase = () => {
   const auth = getAuth();
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
-  const [admin, setAmin] = useState(false);
+  const [admin, setAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  console.log("user", user);
 
   // Register with email and password
   const registerWithEmailAndPassword = (email, password, name) => {
@@ -60,16 +61,15 @@ const useFirebase = () => {
       } else {
         setUser({});
       }
-      setIsLoading(false);
     });
     return () => unsbscribed;
-  }, []);
-
+  }, [auth]);
+  // isAdmin Or not check
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${user.email}`)
+    fetch(`https://safe-taiga-87363.herokuapp.com/user/${user.email}`)
       .then((res) => res.json())
       .then((result) => {
-        setAmin(result.admin);
+        setAdmin(result.admin);
       });
   }, [user.email]);
 
@@ -86,7 +86,7 @@ const useFirebase = () => {
   };
   const saveUserInformation = (name, email) => {
     const user = { displayName: name, email };
-    fetch("http://localhost:5000/user", {
+    fetch("https://safe-taiga-87363.herokuapp.com/user", {
       method: "POST",
       headers: {
         "content-type": "application/json",

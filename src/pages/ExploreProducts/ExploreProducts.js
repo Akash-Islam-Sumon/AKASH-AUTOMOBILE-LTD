@@ -6,7 +6,7 @@ import Navigation from "../Shared/Navigation/Navigation";
 const ExploreProducts = () => {
   const [exploreProducts, setExploreProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/exploreproduct")
+    fetch("https://safe-taiga-87363.herokuapp.com/exploreproduct")
       .then((res) => res.json())
       .then((result) => setExploreProducts(result));
   }, []);

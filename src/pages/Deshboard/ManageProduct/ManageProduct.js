@@ -7,12 +7,12 @@ const ManageProduct = () => {
   const [manegeProduct, setManageProduct] = useState([]);
   console.log(manegeProduct);
   useEffect(() => {
-    fetch("http://localhost:5000/order")
+    fetch("https://safe-taiga-87363.herokuapp.com/order")
       .then((res) => res.json())
       .then((result) => setManageProduct(result));
   }, [delevary]);
   const handleDelevaryOrder = (id) => {
-    fetch(`http://localhost:5000/orderDone/${id}`, {
+    fetch(`https://safe-taiga-87363.herokuapp.com/orderDone/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

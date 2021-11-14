@@ -6,7 +6,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { NavLink } from "react-router-dom";
-import PrivateRoute from "../../Home/LogIn/PrivatrRoute/PrivateRoute";
 
 const Product = ({ product }) => {
   const { name, img, description } = product;

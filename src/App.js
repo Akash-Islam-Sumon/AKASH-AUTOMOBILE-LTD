@@ -10,6 +10,7 @@ import Myorder from "./pages/MyOrder/Myorder";
 import Deshboard from "./pages/Deshboard/Deshboard/Deshboard";
 import ExploreProducts from "./pages/ExploreProducts/ExploreProducts";
 import PrivateRoute from "./pages/Home/Home/LogIn/PrivatrRoute/PrivateRoute";
+import NotFound from "./pages/NotFound.js/NotFound";
 function App() {
   return (
     <div className="App">
@@ -37,11 +38,14 @@ function App() {
             <Route path="/deshboard">
               <Deshboard />
             </Route>
-            <Route path="/booking/:cardId">
+            <PrivateRoute path="/booking/:cardId">
               <Booking />
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <LogIn />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </Router>

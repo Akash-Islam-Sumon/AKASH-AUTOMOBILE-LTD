@@ -17,7 +17,7 @@ const Navigation = () => {
         <Toolbar>
           <IconButton
             size="large"
-            edge="start"
+            // edge="start"
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
@@ -30,7 +30,7 @@ const Navigation = () => {
             component="div"
             sx={{ flexGrow: 1 }}
           >
-            AKASH AUTO MOBILE (PVT.) LTD.
+            AKASH AUTO MOBILE LTD.
           </Typography>
           <NavLink style={{ textDecoration: "none" }} to="/home">
             <Button style={{ color: "white" }} color="inherit">

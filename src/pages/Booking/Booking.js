@@ -9,7 +9,7 @@ const Booking = () => {
   console.log(booking);
   const { cardId } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/singleProduct/${cardId}`)
+    fetch(`https://safe-taiga-87363.herokuapp.com/singleProduct/${cardId}`)
       .then((res) => res.json())
       .then((result) => setBooking(result));
   }, []);

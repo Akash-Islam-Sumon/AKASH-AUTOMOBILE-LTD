@@ -13,7 +13,7 @@ const MakeAdmin = () => {
   const handleMakeAdmin = (e) => {
     const user = { email };
     e.preventDefault();
-    fetch("http://localhost:5000/user/admin", {
+    fetch("https://safe-taiga-87363.herokuapp.com/user/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

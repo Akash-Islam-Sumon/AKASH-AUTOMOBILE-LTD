@@ -11,10 +11,12 @@ import React from "react";
 
 const MyOrderList = ({ myorder }) => {
   const { img, name, _id, control, setControl } = myorder;
-  const handleOrderCancle = (id) => {
-    alert("Are you sure for Delete ???");
-    fetch(`http://localhost:5000/cancelorder/${id}`, {
+  const handleOrderCancle = (_id) => {
+    fetch(`https://safe-taiga-87363.herokuapp.com/cancelorder/${_id}`, {
       method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+      },
     })
       .then((res) => res.json())
       .then((result) => {
@@ -23,6 +25,7 @@ const MyOrderList = ({ myorder }) => {
           reload();
         }
       });
+    alert("Are you sure for Delete ???");
   };
   const reload = () => {
     window.location.reload();

@@ -5,10 +5,9 @@ import Review from "./Review/Review";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
-  console.log(reviews);
 
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch("https://safe-taiga-87363.herokuapp.com/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);
@@ -24,7 +23,7 @@ const Reviews = () => {
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             {reviews.slice(-3).map((review) => (
-              <Review review={review}></Review>
+              <Review key={review._id} review={review}></Review>
             ))}
           </Grid>
         </Box>

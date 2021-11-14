@@ -12,7 +12,7 @@ const AddProduct = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:5000/addproducts", {
+    fetch("https://safe-taiga-87363.herokuapp.com/addproducts", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -21,12 +21,12 @@ const AddProduct = () => {
     });
   };
   useEffect(() => {
-    fetch("http://localhost:5000/allproduct")
+    fetch("https://safe-taiga-87363.herokuapp.com/allproduct")
       .then((res) => res.json())
       .then((data) => setAllProduct(data));
   }, []);
   const handleDeletePdFromServer = (id) => {
-    fetch(`http://localhost:5000/delete/${id}`, {
+    fetch(`https://safe-taiga-87363.herokuapp.com/delete/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
