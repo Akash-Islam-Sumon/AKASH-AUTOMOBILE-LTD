@@ -6,13 +6,12 @@ import Booked from "./Booked/Booked";
 
 const Booking = () => {
   const [booking, setBooking] = useState([]);
-  console.log(booking);
   const { cardId } = useParams();
   useEffect(() => {
     fetch(`https://safe-taiga-87363.herokuapp.com/singleProduct/${cardId}`)
       .then((res) => res.json())
       .then((result) => setBooking(result));
-  }, []);
+  }, [cardId]);
   return (
     <Container>
       <Box sx={{ flexGrow: 1 }}>

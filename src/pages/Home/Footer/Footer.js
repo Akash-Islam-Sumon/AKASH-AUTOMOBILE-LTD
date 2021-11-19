@@ -7,23 +7,25 @@ import { Button } from "react-bootstrap";
 const Footer = () => {
   return (
     <Box
-      style={{ height: "300px", backgroundColor: "#89B8F5" }}
+      style={{ height: "300px", backgroundColor: "#0E0F0F" }}
       sx={{ flexGrow: 1 }}
     >
       <Grid container spacing={2}>
         <Grid item xs={12} md={4}>
-          <h3>AKASH AUTO MOBILE LTD</h3>
+          <h3 style={{ color: "white" }}>AKASH AUTO MOBILE LTD</h3>
           <hr />
-          <h5 style={{ margin: "0px", padding: "0px" }}>
+          <h5 style={{ margin: "0px", padding: "0px", color: "white" }}>
             Uttara, Dhaka-1230 ,Bangladesh
           </h5>
-          <h6 style={{ margin: "0px", padding: "0px" }}>
+          <h6 style={{ margin: "0px", padding: "0px", color: "white" }}>
             Email : akash69.net@gmail.com
           </h6>
-          <h6 style={{ margin: "0px", padding: "0px" }}>Phone : 01997122653</h6>
+          <h6 style={{ margin: "0px", padding: "0px", color: "white" }}>
+            Phone : 01997122653
+          </h6>
         </Grid>
         <Grid item xs={12} md={4}>
-          <h3>LINKS</h3>
+          <h3 style={{ color: "white" }}>LINKS</h3>
           <hr />
           <ul style={{ display: "flex", flexDirection: "column" }}>
             <NavLink
@@ -60,7 +62,7 @@ const Footer = () => {
         </Grid>
 
         <Grid item xs={12} md={4}>
-          <h3>FOLLOWING US</h3>
+          <h3 style={{ color: "white" }}>FOLLOWING US</h3>
           <hr />
           <img
             style={{ height: "60px", width: "60px" }}

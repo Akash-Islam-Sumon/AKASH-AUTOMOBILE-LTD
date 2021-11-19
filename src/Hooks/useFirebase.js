@@ -16,10 +16,10 @@ const useFirebase = () => {
   const [error, setError] = useState("");
   const [admin, setAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  console.log("user", user);
 
   // Register with email and password
   const registerWithEmailAndPassword = (email, password, name) => {
+    setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((users) => {
         setError("");
@@ -40,17 +40,18 @@ const useFirebase = () => {
   // login with emial and password
 
   const logInUser = (email, password, location, history) => {
+    setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const destination = location?.state?.from || "/home";
         history.replace(destination);
-        sessionStorage.setItem("email", userCredential.user.email);
 
         setError("");
       })
       .catch((error) => {
         setError(error.message);
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
 
   // observer
@@ -61,6 +62,7 @@ const useFirebase = () => {
       } else {
         setUser({});
       }
+      setIsLoading(false);
     });
     return () => unsbscribed;
   }, [auth]);

@@ -6,7 +6,7 @@ const OurService = () => {
       <h2 style={{ margin: "80px", color: "blue" }}>WHY JOIN WITH US</h2>
       <div>
         <div className="row">
-          <div className="col col-md-4  col-sm-12">
+          <div className="col col-md-4">
             <img src="https://i.ibb.co/wgMPx0Y/download-4.png" alt="" />
             <h4>LOAN FICITILIES</h4>
             <h6>
@@ -15,7 +15,7 @@ const OurService = () => {
               out of buying a car.
             </h6>
           </div>
-          <div className="col col-md-4 col-sm-12">
+          <div className="col col-md-4">
             <img
               style={{ height: "55%" }}
               src="https://i.ibb.co/LrRqJ81/wwwes-2.png"
@@ -30,7 +30,7 @@ const OurService = () => {
               will avoid your car from facing ..
             </h6>
           </div>
-          <div className="col col-md-4  col-sm-12">
+          <div className="col-md-4">
             <img
               style={{ width: "50%" }}
               src="https://i.ibb.co/TMhRccv/Bangladesh-road-sign-A35-svg.png"

@@ -1,0 +1,48 @@
+.banner {
+  background-image: url("https://i.ibb.co/xLqX3Rt/front-view-generic-brandless-moder-260nw-1150043414.jpg");
+
+  height: 500px;
+  /* background-color: blueviolet; */
+  background-size: cover;
+  background-position: center;
+}
+.banner-text {
+  font-size: 700;
+  padding: 50px;
+  margin-top: 60px;
+  margin-left: 50px;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  color: #0a0a0a;
+}
+.banner-text h2 {
+  font-size: 800;
+}
+.banner-text button {
+  background-color: coral;
+  padding: 10px 35px;
+  color: whitesmoke;
+}
+@media only screen and (max-width: 480px) {
+  .banner-text {
+    font-size: 300px;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    color: #262626;
+  }
+
+  .banner-text h2 {
+    font-size: 800;
+  }
+  .banner-text button {
+    background-color: coral;
+    color: whitesmoke;
+  }
+  .banner-text button {
+    background-color: coral;
+
+    color: whitesmoke;
+  }
+}

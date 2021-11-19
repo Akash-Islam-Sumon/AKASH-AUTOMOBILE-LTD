@@ -26,7 +26,7 @@ const ExploreProducts = () => {
               </Card.Text>
               <NavLink to={`/booking/${exploreProduct._id}`}>
                 {" "}
-                <Button variant="primary">READ MORE</Button>
+                <Button variant="primary">ORDER NOW</Button>
               </NavLink>
             </Card.Body>
           </Card>

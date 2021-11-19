@@ -1,13 +1,13 @@
 import "./Booked.css";
 import React from "react";
 import { useForm } from "react-hook-form";
-import Navigation from "../../Shared/Navigation/Navigation";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import useAuth from "../../../Hooks/useAuth";
+import { Link } from "react-router-dom";
 
 const Booked = ({ booked }) => {
   const { name, img, description, price, cc, madeby } = booked;
@@ -25,7 +25,6 @@ const Booked = ({ booked }) => {
   };
   return (
     <div>
-      <Navigation></Navigation>
       <div style={{ backgroundColor: "#95BEF2" }}>
         <div>
           <div class="row">
@@ -51,7 +50,7 @@ const Booked = ({ booked }) => {
                     <Typography variant="body2" color="text.secondary">
                       {description}
                     </Typography>
-                    <Typography variant="h4" color="text.secondary">
+                    <Typography variant="h4" color="red">
                       Price : {price}
                     </Typography>
                     <Typography variant="h6" color="text.secondary">
@@ -83,18 +82,18 @@ const Booked = ({ booked }) => {
                   type="date"
                   placeholder="Enter your delevary date"
                 />
-                <input
-                  {...register("district")}
-                  placeholder="Enter your District"
-                />
-                <input {...register("thana")} placeholder="Enter your thana" />
-                <input {...register("road")} placeholder="Enter your road" />
                 <input {...register("phone")} placeholder="Enter your phone" />
                 <br />
                 <input
                   style={{ marginBottom: "10px", backgroundColor: "#3F8FF7" }}
                   type="submit"
                 />
+                <button>
+                  {" "}
+                  <Link style={{ textDecoration: "none" }} to="/home">
+                    BACK HOME
+                  </Link>
+                </button>
               </form>
             </div>
           </div>

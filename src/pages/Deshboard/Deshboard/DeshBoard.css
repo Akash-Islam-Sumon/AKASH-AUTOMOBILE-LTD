@@ -1,0 +1,9 @@
+.deshboard {
+  background-color: black;
+  color: aliceblue;
+  padding: 16px;
+}
+.deshborad-left {
+  border-right: 2px solid red;
+  height: 600px;
+}
